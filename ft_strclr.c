@@ -15,5 +15,5 @@
 void	ft_strclr(char *s)
 {
 	if (s != NULL)
-		s = (char *)ft_memset(s, '\0', strlen(s));
+		s = (char *)ft_memset(s, '\0', ft_strlen(s));
 }
