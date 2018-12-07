@@ -1,32 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/03 10:04:16 by widraugr          #+#    #+#             */
-/*   Updated: 2018/12/06 10:01:36 by widraugr         ###   ########.fr       */
+/*   Created: 2018/12/06 15:24:38 by widraugr          #+#    #+#             */
+/*   Updated: 2018/12/06 16:16:51 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+static	void	ft_recprint(char *str, int neg)
 {
-	char	*str;
 	int		i;
 
-	i = 0;
-	if (s == NULL || f == NULL)
-		return (NULL);
-	if (!(str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
-	while (s[i] != '\0')
+	i = ft_strlen(str) - 1;
+	if (neg == -1)
+		ft_putchar('-');
+	if (*str == '\0')
+		ft_putchar('0');
+	while (i >= 0)
 	{
-		str[i] = f(i, s[i]);
+		ft_putchar(str[i]);
+		i--;
+	}
+}
+
+void			ft_putnbr(int n)
+{
+	unsigned int	num;
+	char			str[12];
+	int				i;
+	int				neg;
+
+	i = 0;
+	num = n;
+	neg = 0;
+	if (n < 0)
+	{
+		neg = -1;
+		num = num * (-1);
+	}
+	while (num != 0)
+	{
+		str[i] = (num % 10) + '0';
+		num /= 10;
 		i++;
 	}
 	str[i] = '\0';
-	return (str);
+	ft_recprint(str, neg);
 }

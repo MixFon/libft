@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 15:34:50 by widraugr          #+#    #+#             */
-/*   Updated: 2018/12/04 16:33:17 by widraugr         ###   ########.fr       */
+/*   Updated: 2018/12/06 10:05:47 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 
 	i = 0;
-
 	if (!s1 || !s2)
 		return (NULL);
 	len = (ft_strlen(s1) + ft_strlen(s2));
@@ -27,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	while (*(s1 + i))
 	{
-		str[i] = *(s1 + i);	
+		str[i] = *(s1 + i);
 		i++;
 	}
 	while (*s2)

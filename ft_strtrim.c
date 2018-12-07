@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/12/06 10:04:37 by widraugr          #+#    #+#             */
+/*   Updated: 2018/12/06 10:32:16 by widraugr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_rtnarr (char const *s, size_t i, size_t l)
+static char	*ft_rtnarr(char const *s, size_t i, size_t l)
 {
 	size_t	n;
 	char	*str;
@@ -11,7 +22,7 @@ static char	*ft_rtnarr (char const *s, size_t i, size_t l)
 		return (NULL);
 	while (i <= l)
 	{
-		str[n] = s[i]; 
+		str[n] = s[i];
 		i++;
 		n++;
 	}
@@ -19,7 +30,7 @@ static char	*ft_rtnarr (char const *s, size_t i, size_t l)
 	return (str);
 }
 
-static char	*ft_rtnnull()
+static char	*ft_rtnnull(void)
 {
 	char *str;
 
@@ -39,10 +50,11 @@ char		*ft_strtrim(char const *s)
 	l = ft_strlen(s);
 	while (s[i] == ',' || s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
 		i++;
-	while (s[l - 1] == ',' || s[l - 1] == '\n' || s[l - 1] == ' ' || s[l - 1] == '\t')
+	while (s[l - 1] == ',' || s[l - 1] == '\n' ||
+			s[l - 1] == ' ' || s[l - 1] == '\t')
 		l--;
 	if (s[i] == '\0')
 		return (ft_rtnnull());
-	else 
+	else
 		return (ft_rtnarr(s, i, l));
 }

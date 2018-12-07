@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_ft_lstnew.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/03 09:57:51 by widraugr          #+#    #+#             */
-/*   Updated: 2018/12/06 10:00:55 by widraugr         ###   ########.fr       */
+/*   Created: 2018/12/07 14:04:14 by widraugr          #+#    #+#             */
+/*   Updated: 2018/12/07 15:27:23 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	if (s1 == NULL || s2 == NULL)
-		return (0);
-	if (ft_strlen(s1) != ft_strlen(s2))
-		return (0);
-	while (*s1 && *s2)
+	t_list	*newl;
+
+	if (!(newl = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	if (!content)
 	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
+		newl->content = NULL;
+		newl->content_size = 0;
+		newl->next = NULL;
+		free(newl);
 	}
-	return (1);
+	else
+	{
+		newl->content = ft_strdup(content);
+		newl->content_size = content_size;
+		newl->next = NULL;
+	}
+	return (newl);
 }
