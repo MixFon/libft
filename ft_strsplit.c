@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:51:31 by widraugr          #+#    #+#             */
-/*   Updated: 2018/12/07 14:44:47 by widraugr         ###   ########.fr       */
+/*   Updated: 2019/03/25 10:10:54 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 static int		ft_numwrld(char const *s, char c)
 {
-	int num;
+	unsigned int num;
 
 	num = 0;
-	if (*s != c)
-		num++;
+	while (*s && *s == c)
+		s++;
 	while (*s)
 	{
 		if (*s == c && *(s + 1) != c)
 			num++;
 		s++;
 	}
-	if (*(s - 1) != c)
+	if (*(s - 1) && *(s - 1) != c)
 		num++;
-	return (num - 1);
+	return (num);
 }
 
 static size_t	ft_strclen(char *s, char c)
@@ -63,7 +63,7 @@ char			**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	wrld = ft_numwrld(s, c);
-	if (!(arr = (char **)malloc(sizeof(char *) * wrld + 1)))
+	if (!(arr = (char **)malloc(sizeof(char *) * (wrld + 1))))
 		return (NULL);
 	while (i < wrld)
 	{

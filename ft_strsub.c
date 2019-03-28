@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 10:08:29 by widraugr          #+#    #+#             */
-/*   Updated: 2018/12/04 15:26:24 by widraugr         ###   ########.fr       */
+/*   Updated: 2018/12/28 13:39:01 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	unsigned int	m;
-	char			*str;
+	size_t	i;
+	size_t	m;
+	char	*str;
 
 	m = 0;
 	i = start;

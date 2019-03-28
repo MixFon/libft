@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 16:21:51 by widraugr          #+#    #+#             */
-/*   Updated: 2018/12/07 16:32:05 by widraugr         ###   ########.fr       */
+/*   Updated: 2018/12/20 15:17:01 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	t_list	*iter;
 
-	iter = lst;
-	while (iter)
+	while (lst)
 	{
-		f(iter);
-		iter = iter->next;
+		iter = lst->next;
+		f(lst);
+		lst = iter;
 	}
 }

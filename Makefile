@@ -6,11 +6,11 @@
 #    By: widraugr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/29 13:07:44 by widraugr          #+#    #+#              #
-#    Updated: 2018/12/07 16:33:06 by widraugr         ###   ########.fr        #
+#    Updated: 2019/03/28 09:45:58 by widraugr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = libftprintf.a
 
 NAMEBIN = libft
 
@@ -70,7 +70,54 @@ ft_lstnew.c\
 ft_lstdelone.c\
 ft_lstdel.c\
 ft_lstadd.c\
-ft_lstiter.c
+ft_lstiter.c\
+ft_lstmap.c\
+ft_numwr.c\
+ft_strfr.c\
+ft_strcl.c\
+ft_strnjoin.c\
+ft_strnjoinfree.c\
+ft_strfr.c\
+ft_itoo.c\
+ft_itox.c\
+ft_printf.c\
+type_char.c\
+type_string.c\
+ft_un_itoa.c\
+type_float.c\
+type_float2.c\
+ft_concat_str.c\
+ft_float_inf.c\
+ft_itoa_llint.c\
+ft_copy_string_left.c\
+ft_copy_string_right.c\
+ft_copy_string_left_wchar.c\
+ft_copy_string_right_wchar.c\
+ft_strdup_wchar.c\
+ft_strnew_char_wchar.c\
+ft_strnew_wchar.c\
+ft_strncpy_wchar.c\
+ft_strdel_wchar.c\
+ft_strlen_wchar.c\
+ft_putchar_wchar.c\
+ft_putstr_wchar.c\
+ft_put_pointer.c\
+ft_octotorp_hex.c\
+ft_put_percent.c\
+ft_check_un_dimension.c\
+ft_put_unsigned.c\
+ft_create_new_lst_strchar.c\
+ft_put_octal.c\
+ft_put_hexadecimal.c\
+ft_cop_str_left_or_right.c\
+ft_put_decimal.c\
+ft_check_dimension.c\
+ft_read_format.c\
+ft_is_flag_type_size.c\
+ft_check_flag_spetia_type.c\
+ft_memset_wchar.c\
+ft_multi_strdup.c\
+get_next_line.c
 
 FILE_O = ft_atoi.o\
 ft_bzero.o\
@@ -128,7 +175,54 @@ ft_lstnew.o\
 ft_lstdelone.o\
 ft_lstdel.o\
 ft_lstadd.o\
-ft_lstiter.o
+ft_lstiter.o\
+ft_lstmap.o\
+ft_numwr.o\
+ft_strfr.o\
+ft_strcl.o\
+ft_strnjoin.o\
+ft_strnjoinfree.o\
+ft_strfr.o\
+ft_itoo.o\
+ft_itox.o\
+ft_printf.o\
+type_char.o\
+type_string.o\
+ft_un_itoa.o\
+type_float.o\
+type_float2.o\
+ft_concat_str.o\
+ft_float_inf.o\
+ft_itoa_llint.o\
+ft_copy_string_left.o\
+ft_copy_string_right.o\
+ft_copy_string_left_wchar.o\
+ft_copy_string_right_wchar.o\
+ft_strnew_char_wchar.o\
+ft_strnew_wchar.o\
+ft_strncpy_wchar.o\
+ft_strlen_wchar.o\
+ft_putchar_wchar.o\
+ft_strdel_wchar.o\
+ft_strdup_wchar.o\
+ft_putstr_wchar.o\
+ft_put_pointer.o\
+ft_octotorp_hex.o\
+ft_put_percent.o\
+ft_check_un_dimension.o\
+ft_put_unsigned.o\
+ft_create_new_lst_strchar.o\
+ft_put_octal.o\
+ft_put_hexadecimal.o\
+ft_cop_str_left_or_right.o\
+ft_put_decimal.o\
+ft_check_dimension.o\
+ft_read_format.o\
+ft_is_flag_type_size.o\
+ft_check_flag_spetia_type.o\
+ft_memset_wchar.o\
+ft_multi_strdup.o\
+get_next_line.o
 
 all : $(NAME)
 

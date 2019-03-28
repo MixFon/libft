@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 14:04:14 by widraugr          #+#    #+#             */
-/*   Updated: 2018/12/07 15:27:23 by widraugr         ###   ########.fr       */
+/*   Updated: 2018/12/20 14:49:25 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		newl->content = NULL;
 		newl->content_size = 0;
-		newl->next = NULL;
-		free(newl);
 	}
 	else
 	{
-		newl->content = ft_strdup(content);
+		if (!(newl->content = ft_memalloc(content_size)))
+			return (NULL);
+		newl->content = ft_memmove(newl->content, content, content_size);
 		newl->content_size = content_size;
-		newl->next = NULL;
 	}
+	newl->next = NULL;
 	return (newl);
 }

@@ -6,11 +6,13 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/27 16:48:08 by widraugr          #+#    #+#             */
-/*   Updated: 2018/12/04 15:32:30 by widraugr         ###   ########.fr       */
+/*   Updated: 2019/01/31 09:52:33 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
 	unsigned int		i;
 	int					n;
