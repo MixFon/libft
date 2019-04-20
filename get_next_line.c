@@ -77,7 +77,7 @@ int				get_next_line(const int fd, char **line)
 
 	buf = NULL;
 	if (fd < 0 || !line || !(*line = ft_strnew(0))
-			|| BUFF_SIZE < 1 || read(fd, 0, 0) < 0)
+			|| BUFF_SIZE < 1)
 		return (-1);
 	lst = ft_iterlst(lst, fd);
 	if (lst->tail && ft_cuttail(lst->tail, lst, line))
