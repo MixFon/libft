@@ -6,7 +6,7 @@
 #    By: widraugr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/29 13:07:44 by widraugr          #+#    #+#              #
-#    Updated: 2019/03/28 09:45:58 by widraugr         ###   ########.fr        #
+#    Updated: 2019/06/12 13:48:01 by widraugr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -227,7 +227,7 @@ get_next_line.o
 all : $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror -I . -c $(FILE_C)  
+	gcc -g -Wall -Wextra -Werror -I . -c $(FILE_C)  
 	ar cr $(NAME) $(FILE_O)
 	ranlib $(NAME)
 
