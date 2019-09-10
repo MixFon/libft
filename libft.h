@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:19:04 by widraugr          #+#    #+#             */
-/*   Updated: 2019/08/21 15:39:23 by widraugr         ###   ########.fr       */
+/*   Updated: 2019/09/10 12:46:28 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ void				ft_putchar_wchar(wchar_t cht);
 void				ft_putstr_wchar(wchar_t const *s);
 void				*ft_memset_wchar(void *b, wchar_t c, size_t len);
 char				*ft_multi_strdup(int count, ...);
+void				sys_err(char *err);
 
 #endif

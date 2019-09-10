@@ -6,7 +6,7 @@
 #    By: widraugr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/29 13:07:44 by widraugr          #+#    #+#              #
-#    Updated: 2019/06/12 13:48:01 by widraugr         ###   ########.fr        #
+#    Updated: 2019/09/10 12:43:00 by widraugr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -117,7 +117,8 @@ ft_is_flag_type_size.c\
 ft_check_flag_spetia_type.c\
 ft_memset_wchar.c\
 ft_multi_strdup.c\
-get_next_line.c
+get_next_line.c\
+sys_err.c
 
 FILE_O = ft_atoi.o\
 ft_bzero.o\
@@ -222,7 +223,8 @@ ft_is_flag_type_size.o\
 ft_check_flag_spetia_type.o\
 ft_memset_wchar.o\
 ft_multi_strdup.o\
-get_next_line.o
+get_next_line.o\
+sys_err.o
 
 all : $(NAME)
 
