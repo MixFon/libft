@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 16:22:18 by widraugr          #+#    #+#             */
-/*   Updated: 2019/09/10 12:21:49 by widraugr         ###   ########.fr       */
+/*   Updated: 2019/09/11 10:21:17 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@
 void	ft_putstr_fd(char const *s, int fd)
 {
 	if (s)
-		while (*(s))
-			ft_putchar_fd(*s++, fd);
+		write(fd, s, ft_strlen(s));
 }
