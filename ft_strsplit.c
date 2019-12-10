@@ -51,6 +51,15 @@ static	char	**ft_strfree(char **arr, int i)
 	return (NULL);
 }
 
+int check_str(const char *s)
+{
+	if (s == NULL)
+		return (0);
+	if (*s == '\0')
+		return (0);
+	return (1);
+}
+
 char			**ft_strsplit(char const *s, char c)
 {
 	int		wrld;
@@ -60,14 +69,14 @@ char			**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	num = 0;
-	if (!s)
+	if (!check_str(s))
 		return (NULL);
 	wrld = ft_numwrld(s, c);
 	if (!(arr = (char **)malloc(sizeof(char *) * (wrld + 1))))
 		return (NULL);
 	while (i < wrld)
 	{
-		while (*(s + num) == c )
+		while (*(s + num) == c && *(s + num) != '\0')
 			num++;
 		if (!(arr[i] = ft_strsub(s, num, ft_strclen((char *)(s + num), c))))
 			return (ft_strfree(arr, i));
