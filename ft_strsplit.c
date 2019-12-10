@@ -67,11 +67,11 @@ char			**ft_strsplit(char const *s, char c)
 		return (NULL);
 	while (i < wrld)
 	{
-		while (*(s + num) == c)
+		while (*(s + num) == c )
 			num++;
 		if (!(arr[i] = ft_strsub(s, num, ft_strclen((char *)(s + num), c))))
 			return (ft_strfree(arr, i));
-		while (*(s + num) != c)
+		while (*(s + num) != c && *(s + num) != '\0')
 			num++;
 		i++;
 	}
