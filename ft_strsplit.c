@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:51:31 by widraugr          #+#    #+#             */
-/*   Updated: 2019/12/18 08:52:24 by widraugr         ###   ########.fr       */
+/*   Updated: 2019/12/18 08:54:31 by widraugr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static	char	**ft_strfree(char **arr, int i)
 	return (NULL);
 }
 
-int			check_str(const char *s)
+int				check_str(const char *s)
 {
 	if (s == NULL)
 		return (0);
