@@ -16,6 +16,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include "get_next_line.h"
+# include "ft_printf.h"
 
 typedef struct		s_list
 {
@@ -106,5 +107,6 @@ void				ft_putstr_wchar(wchar_t const *s);
 void				*ft_memset_wchar(void *b, wchar_t c, size_t len);
 char				*ft_multi_strdup(int count, ...);
 void				sys_err(char *err);
+int					ft_numwr(char const *s, char c);
 
 #endif
