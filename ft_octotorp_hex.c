@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/07 15:24:33 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 12:45:51 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:10:33 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_octotorp_hex(char **str)
 {
-	char *s;
+	char	*s;
 
 	s = *str;
 	*str = ft_strjoin("0x", *str);

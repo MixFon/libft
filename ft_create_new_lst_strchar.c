@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 10:00:06 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 12:40:42 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:25:13 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ t_format	*ft_newstruct(void)
 	int			i;
 
 	i = -1;
-	if (!(lst = (t_format *)malloc(sizeof(t_format))))
+	lst = (t_format *)malloc(sizeof(t_format));
+	if (lst == NULL)
 		return (NULL);
 	while (++i < 5)
 		lst->flag[i] = '\0';
@@ -40,9 +41,9 @@ t_format	*ft_newstruct(void)
 ** Create new string  with starting chars.
 */
 
-char		*ft_strnew_char(int c, size_t len)
+char	*ft_strnew_char(int c, size_t len)
 {
-	char *ptr;
+	char	*ptr;
 
 	ptr = ft_strnew(len);
 	ptr = (char *)ft_memset((char *)ptr, c, len);

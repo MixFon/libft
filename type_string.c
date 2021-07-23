@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 14:21:00 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/11 13:33:29 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 11:16:35 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_put_str_without_size(t_format *lst, va_list lst_arg)
 	int		flag;
 
 	flag = 0;
-	arg = va_arg(lst_arg, char*);
+	arg = va_arg(lst_arg, char *);
 	ft_sourse(&arg, &str_wid, &flag, lst);
 	if (lst->exactness == 0 && lst->dot == 0)
 		str_exac = ft_strdup(arg);
@@ -78,7 +78,7 @@ void	ft_wchar_str(t_format *lst, va_list lst_arg)
 	int		flag;
 
 	flag = 0;
-	arg = va_arg(lst_arg, wchar_t*);
+	arg = va_arg(lst_arg, wchar_t *);
 	ft_sourse_wchar(&arg, &str_wid, &flag, lst);
 	if (lst->exactness == 0 && lst->dot == 0)
 		str_exac = ft_strdup_wchar(arg);
@@ -102,6 +102,6 @@ void	ft_put_string(t_format *lst, va_list lst_arg, char s)
 {
 	if (s == 's')
 		ft_put_str_without_size(lst, lst_arg);
-	else	if (s == 'S')
+	else if (s == 'S')
 		ft_wchar_str(lst, lst_arg);
 }

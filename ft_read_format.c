@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 11:54:52 by widraugr          #+#    #+#             */
-/*   Updated: 2020/11/06 13:09:16 by mixfon           ###   ########.fr       */
+/*   Updated: 2021/07/23 12:04:20 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_read_width(char *c, t_format *lst, va_list lst_arg)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (*c == '*')

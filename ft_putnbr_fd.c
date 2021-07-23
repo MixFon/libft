@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 16:33:00 by widraugr          #+#    #+#             */
-/*   Updated: 2019/09/10 12:54:34 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:04:47 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static	void	ft_recprint_fd(char *str, int neg, int fd)
 	}
 }
 
-void			ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	num;
 	char			str[12];

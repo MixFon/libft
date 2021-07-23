@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/07 12:28:11 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 12:50:54 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 11:18:39 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_put_char_not_zero(t_format *lst, char *ch)
 {
-	char *str_wid;
-	char *str_exac;
-	char *str_res;
+	char	*str_wid;
+	char	*str_exac;
+	char	*str_res;
 
 	if (ft_chack_flag(lst, '0') && !ft_chack_flag(lst, '-'))
 		str_wid = ft_strnew_char('0', lst->width);
@@ -35,7 +35,7 @@ void	ft_put_char_not_zero(t_format *lst, char *ch)
 
 void	ft_source_char_zero(t_format *lst)
 {
-	char *str_wid;
+	char	*str_wid;
 
 	if (ft_chack_flag(lst, '-'))
 	{

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 14:30:40 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 15:09:44 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:10:18 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_sotr_type(char *iter, t_format *lst, va_list lst_arg)
+int	ft_sotr_type(char *iter, t_format *lst, va_list lst_arg)
 {
 	ft_check_special_type(iter, lst);
 	if (*iter == 'i' || *iter == 'd' || *iter == 'D')
@@ -36,7 +36,7 @@ int		ft_sotr_type(char *iter, t_format *lst, va_list lst_arg)
 	return (1);
 }
 
-int		ft_chack_valid_format(char *iter, char **iter_ptr, int *len)
+int	ft_chack_valid_format(char *iter, char **iter_ptr, int *len)
 {
 	int	i;
 
@@ -48,9 +48,9 @@ int		ft_chack_valid_format(char *iter, char **iter_ptr, int *len)
 	}
 	while (!ft_istype(*iter))
 	{
-		if ((!ft_isflag(*iter) && !ft_issize(*iter) &&
-				!ft_isdigit(*iter) && *iter != '.' && *iter != '*')
-				|| *(iter + 0) == '\0')
+		if ((!ft_isflag(*iter) && !ft_issize(*iter)
+				&& !ft_isdigit(*iter) && *iter != '.' && *iter != '*')
+			|| *(iter + 0) == '\0')
 		{
 			*iter_ptr += i;
 			*len = i + 1;
@@ -62,7 +62,7 @@ int		ft_chack_valid_format(char *iter, char **iter_ptr, int *len)
 	return (1);
 }
 
-int		ft_sort_arg(char *iter, va_list lst_arg, size_t *len_str,
+int	ft_sort_arg(char *iter, va_list lst_arg, size_t *len_str,
 		size_t *len_format)
 {
 	t_format	*lst;
@@ -78,7 +78,7 @@ int		ft_sort_arg(char *iter, va_list lst_arg, size_t *len_str,
 	return (ptr - iter);
 }
 
-int		ft_printf(const char *restrict format, ...)
+int	ft_printf(const char *restrict format, ...)
 {
 	char		*iter;
 	va_list		lst_arg;

@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 14:17:25 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 14:49:21 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 11:17:38 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ char	*ft_change_symb(char *fract_str, int *i, int *end)
 
 char	*ft_round(char *fract_str)
 {
-	int i;
-	int end;
+	int	i;
+	int	end;
 
 	end = ft_strlen(fract_str) - 1;
 	i = end;

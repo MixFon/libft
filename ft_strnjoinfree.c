@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strnjoinfree.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 15:34:50 by widraugr          #+#    #+#             */
-/*   Updated: 2018/12/25 15:06:36 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 11:53:08 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_strnjoinfree(char *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	len = (ft_strlen(s1) + ft_strcl(s2, '\n'));
-	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
+	str = (char *)malloc(sizeof(char) * len + 1);
+	if (str == NULL)
 		return (NULL);
 	while (*(s1 + i))
 	{

@@ -6,15 +6,15 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 12:16:50 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 12:24:46 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:26:16 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_chack_flag(t_format *lst, char flag)
+int	ft_chack_flag(t_format *lst, char flag)
 {
-	int i;
+	int	i;
 
 	i = -1;
 	while (++i < 5)

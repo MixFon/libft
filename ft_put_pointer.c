@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/07 14:58:36 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/07 16:26:51 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:06:12 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	ft_pointer(t_format *lst, uintmax_t arg)
 	char	*str_exa;
 	char	*str;
 
-	if (ft_chack_flag(lst, '0') && lst->exactness == 0 &&
-			!ft_chack_flag(lst, '-'))
+	if (ft_chack_flag(lst, '0') && lst->exactness == 0
+		&& !ft_chack_flag(lst, '-'))
 		str_wid = ft_strnew_char('0', lst->width);
 	else
 		str_wid = ft_strnew_char(' ', lst->width);

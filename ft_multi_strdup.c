@@ -6,13 +6,13 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 10:11:12 by widraugr          #+#    #+#             */
-/*   Updated: 2019/08/21 13:50:01 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:12:45 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char			*ft_multi_strdup(int count, ...)
+char	*ft_multi_strdup(int count, ...)
 {
 	va_list		list_arg;
 	int			i;
@@ -26,13 +26,12 @@ char			*ft_multi_strdup(int count, ...)
 	while (++i < count)
 		len += ft_strlen(va_arg(list_arg, const char *));
 	va_end(list_arg);
-	if (!(str = ft_strnew(len)))
-		return (NULL);
+	str = ft_strnew(len);
 	va_start(list_arg, count);
 	i = -1;
 	while (++i < count)
 	{
-		ptr = va_arg(list_arg, const char*);
+		ptr = va_arg(list_arg, const char *);
 		if (ptr == NULL)
 			continue ;
 		str = ft_strncat(str, ptr, ft_strlen(ptr));

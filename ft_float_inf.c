@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 12:43:20 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 15:09:50 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:21:23 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_float_nan(t_format *lst, char type)
 	lst->len_str = 3;
 }
 
-int		ft_float_inf(t_format *lst, long double arg, char type)
+int	ft_float_inf(t_format *lst, long double arg, char type)
 {
 	if (arg == 1.0 / 0.0)
 	{

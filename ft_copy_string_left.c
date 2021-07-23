@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/07 09:48:01 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 12:36:14 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:25:31 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_copy_string_left(char *str1, char *str2)
 {
 	int	len1;
 	int	len2;
-	int i;
+	int	i;
 
 	i = 0;
 	len1 = (int)ft_strlen(str1);

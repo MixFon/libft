@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/13 11:35:37 by widraugr          #+#    #+#             */
-/*   Updated: 2019/12/19 12:57:28 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 11:22:57 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <unistd.h>
 # include <stdio.h>
 
-typedef struct		s_lst
+typedef struct s_lst
 {
 	char			*tail;
 	int				fd;

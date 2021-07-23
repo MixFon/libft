@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_ocral.c                                     :+:      :+:    :+:   */
+/*   ft_put_octal.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 09:55:47 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/11 09:15:34 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:07:11 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	ft_octotorp_octal(char **str, uintmax_t arg, t_format *lst)
 {
-	char *s;
+	char	*s;
 
 	if (arg == 0 && lst->dot == 0)
 		s = ft_strnew_char('0', ft_strlen(*str) + 0);
@@ -37,8 +37,8 @@ void	ft_octal(t_format *lst, uintmax_t arg)
 	char	*str_exa;
 	char	*str;
 
-	if (ft_chack_flag(lst, '0') && lst->exactness == 0 &&
-			!ft_chack_flag(lst, '-'))
+	if (ft_chack_flag(lst, '0') && lst->exactness == 0
+		&& !ft_chack_flag(lst, '-'))
 		str_wid = ft_strnew_char('0', lst->width);
 	else
 		str_wid = ft_strnew_char(' ', lst->width);

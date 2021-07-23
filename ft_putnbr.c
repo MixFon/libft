@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 15:24:38 by widraugr          #+#    #+#             */
-/*   Updated: 2019/01/31 10:14:40 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:05:10 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static	void	ft_recprint(char *str, intmax_t neg)
 	}
 }
 
-void			ft_putnbr(intmax_t n)
+void	ft_putnbr(intmax_t n)
 {
 	intmax_t		num;
 	char			str[20];

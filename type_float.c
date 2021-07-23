@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 12:51:06 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 14:51:13 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 11:18:13 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_add_symb(char *str, char ch)
 {
-	char *newstr;
+	char	*newstr;
 
 	newstr = ft_strnew_char(ch, ft_strlen(str) + 1);
 	newstr = ft_copy_string_right(str, newstr);

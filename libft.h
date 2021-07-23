@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:19:04 by widraugr          #+#    #+#             */
-/*   Updated: 2019/12/19 12:10:32 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 11:22:23 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 # include "get_next_line.h"
 # include "ft_printf.h"
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
 
-size_t				ft_strlen (const char *s);
+size_t				ft_strlen(const char *s);
 char				*ft_strdup(const char *s1);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -43,7 +43,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *haystack, const char *needle,
-	size_t len);
+						size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
@@ -97,9 +97,9 @@ wchar_t				*ft_strdup_wchar(const wchar_t *s1);
 wchar_t				*ft_strnew_char_wchar(wchar_t c, size_t len);
 wchar_t				*ft_strnew_wchar(size_t len);
 wchar_t				*ft_strncpy_wchar(wchar_t *dst, const wchar_t *src,
-		size_t len);
+						size_t	len);
 void				ft_strdel_wchar(wchar_t **as);
-size_t				ft_strlen_wchar (const wchar_t *s);
+size_t				ft_strlen_wchar(const wchar_t *s);
 wchar_t				*ft_copy_string_right_wchar(wchar_t *str1, wchar_t *str2);
 wchar_t				*ft_copy_string_left_wchar(wchar_t *str1, wchar_t *str2);
 void				ft_putchar_wchar(wchar_t cht);

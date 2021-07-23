@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/07 11:01:05 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/07 15:05:11 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:22:11 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ wchar_t	*ft_copy_string_left_wchar(wchar_t *str1, wchar_t *str2)
 {
 	int	len1;
 	int	len2;
-	int i;
+	int	i;
 
 	i = 0;
 	len1 = (int)ft_strlen_wchar(str1);

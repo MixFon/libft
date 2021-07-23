@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 10:36:59 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/01 16:29:24 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:17:32 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	ft_fullstr_o(char *str, uintmax_t n)
 ** Move decimal to octal and fill string
 */
 
-void		ft_itoo(char *str, uintmax_t n)
+void	ft_itoo(char *str, uintmax_t n)
 {
 	if (n >= 8)
 		ft_itoo(str, n / 8);

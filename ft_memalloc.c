@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 09:52:38 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/26 10:46:39 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:14:13 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *mal;
+	void	*mal;
 
-	if (!(mal = (void *)malloc(sizeof(void) * size)))
+	mal = (void *)malloc(sizeof(void) * size);
+	if (mal == NULL)
 		return (NULL);
 	ft_bzero(mal, size);
 	return (mal);

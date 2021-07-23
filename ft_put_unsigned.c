@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 09:41:45 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 09:53:33 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:05:43 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_unsigned(t_format *lst, uintmax_t arg)
 	char	*str;
 
 	if (ft_chack_flag(lst, '0') && !ft_chack_flag(lst, '-')
-			&& lst->exactness == 0)
+		&& lst->exactness == 0)
 		str_wid = ft_strnew_char('0', lst->width);
 	else
 		str_wid = ft_strnew_char(' ', lst->width);

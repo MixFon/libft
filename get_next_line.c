@@ -6,13 +6,13 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 12:55:17 by widraugr          #+#    #+#             */
-/*   Updated: 2019/12/19 12:55:27 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 13:05:48 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int		ft_new_line(char **s, char **line, int fd, int ret)
+int	ft_new_line(char **s, char **line, int fd, int ret)
 {
 	char	*tmp;
 	int		len;
@@ -39,7 +39,13 @@ int		ft_new_line(char **s, char **line, int fd, int ret)
 	return (1);
 }
 
-int		get_next_line(const int fd, char **line)
+void	func_source(char **str, char *tmp)
+{
+	free(*str);
+	*str = tmp;
+}	
+
+int	get_next_line(const int fd, char **line)
 {
 	static char	*s[255];
 	char		buf[BUFF_SIZE + 1];
@@ -48,14 +54,16 @@ int		get_next_line(const int fd, char **line)
 
 	if (fd < 0 || line == NULL)
 		return (-1);
-	while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
+	while (21)
 	{
+		ret = read(fd, buf, BUFF_SIZE);
+		if (ret <= 0)
+			break ;
 		buf[ret] = '\0';
 		if (s[fd] == NULL)
 			s[fd] = ft_strnew(1);
 		tmp = ft_strjoin(s[fd], buf);
-		free(s[fd]);
-		s[fd] = tmp;
+		func_source(&s[fd], tmp);
 		if (ft_strchr(buf, '\n'))
 			break ;
 	}

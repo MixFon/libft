@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 10:43:12 by widraugr          #+#    #+#             */
-/*   Updated: 2019/03/21 10:35:43 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:17:15 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,15 @@ static void	ft_fullstr_x(char *str, uintmax_t n)
 		i++;
 	if (n == 10)
 		str[i] = 'a';
-	else	if (n == 11)
+	else if (n == 11)
 		str[i] = 'b';
-	else	if (n == 12)
+	else if (n == 12)
 		str[i] = 'c';
-	else	if (n == 13)
+	else if (n == 13)
 		str[i] = 'd';
-	else	if (n == 14)
+	else if (n == 14)
 		str[i] = 'e';
-	else	if (n == 15)
+	else if (n == 15)
 		str[i] = 'f';
 	else
 		str[i] = *ptr;
@@ -46,7 +46,7 @@ static void	ft_fullstr_x(char *str, uintmax_t n)
 ** Move decimal to hexadecimal
 */
 
-void		ft_itox(char *str, uintmax_t n)
+void	ft_itox(char *str, uintmax_t n)
 {
 	if (n >= 16)
 		ft_itox(str, n / 16);

@@ -6,7 +6,7 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 10:42:41 by widraugr          #+#    #+#             */
-/*   Updated: 2020/11/17 08:38:07 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:57:30 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdio.h>
 # include "libft.h"
 
-typedef struct	s_format
+typedef struct s_format
 {
 	char		flag[5];
 	int			width;

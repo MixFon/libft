@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_llint.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 12:09:44 by widraugr          #+#    #+#             */
-/*   Updated: 2019/02/08 12:43:12 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 12:18:49 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,13 @@ static char	*ft_recstr(char *str, int neg)
 		i--;
 	}
 	cop[n] = '\0';
-	if (!(rtnstr = ft_strdup(cop)))
+	rtnstr = ft_strdup(cop);
+	if (rtnstr == NULL)
 		return (NULL);
 	return (rtnstr);
 }
 
-char		*ft_itoa_llint(long long int n)
+char	*ft_itoa_llint(long long int n)
 {
 	size_t			i;
 	long long int	num;
@@ -60,7 +61,8 @@ char		*ft_itoa_llint(long long int n)
 		i++;
 	}
 	str[i] = '\0';
-	if (!(rtnstr = ft_recstr(str, neg)))
+	rtnstr = ft_recstr(str, neg);
+	if (rtnstr == NULL)
 		return (NULL);
 	return (rtnstr);
 }

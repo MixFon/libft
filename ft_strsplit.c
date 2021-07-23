@@ -6,15 +6,15 @@
 /*   By: widraugr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 11:51:31 by widraugr          #+#    #+#             */
-/*   Updated: 2019/12/18 08:54:31 by widraugr         ###   ########.fr       */
+/*   Updated: 2021/07/23 11:50:23 by mixfon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_numwrld(char const *s, char c)
+static int	ft_numwrld(char const *s, char c)
 {
-	unsigned int num;
+	unsigned int	num;
 
 	num = 0;
 	while (*s && *s == c)
@@ -51,7 +51,7 @@ static	char	**ft_strfree(char **arr, int i)
 	return (NULL);
 }
 
-int				check_str(const char *s)
+int	check_str(const char *s)
 {
 	if (s == NULL)
 		return (0);
@@ -60,7 +60,7 @@ int				check_str(const char *s)
 	return (1);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	int		wrld;
 	int		i;
@@ -72,13 +72,13 @@ char			**ft_strsplit(char const *s, char c)
 	if (!check_str(s))
 		return (NULL);
 	wrld = ft_numwrld(s, c);
-	if (!(arr = (char **)malloc(sizeof(char *) * (wrld + 1))))
-		return (NULL);
+	arr = (char **)malloc(sizeof(char *) * (wrld + 1));
 	while (i < wrld)
 	{
 		while (*(s + num) == c && *(s + num) != '\0')
 			num++;
-		if (!(arr[i] = ft_strsub(s, num, ft_strclen((char *)(s + num), c))))
+		arr[i] = ft_strsub(s, num, ft_strclen((char *)(s + num), c));
+		if (arr[i] == NULL)
 			return (ft_strfree(arr, i));
 		while (*(s + num) != c && *(s + num) != '\0')
 			num++;
