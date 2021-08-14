@@ -6,7 +6,7 @@
 #    By: widraugr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/29 13:07:44 by widraugr          #+#    #+#              #
-#    Updated: 2019/12/18 08:53:22 by widraugr         ###   ########.fr        #
+#    Updated: 2021/08/14 14:46:32 by mixfon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ FILE_C =	ft_atoi.c\
 			ft_read_format.c ft_is_flag_type_size.c ft_check_flag_spetia_type.c\
 			ft_memset_wchar.c ft_multi_strdup.c get_next_line.c sys_err.c
 
-FLAGS = -Wall -Wextra -Werror -I .
+FLAGS = -g -Wall -Wextra -Werror -I .
 
 VPATH = $(DIROBJ)
 
@@ -50,20 +50,32 @@ OBJ = $(addprefix $(DIROBJ), $(FILE_C:.c=.o))
 
 all : $(NAME)
 
-$(NAME): $(DIROBJ) $(OBJ) 
-	ar cr $(NAME) $(OBJ)
-	ranlib $(NAME)
+$(NAME): $(DIROBJ) $(OBJ)
+	@ar cr $(NAME) $(OBJ)
+	@tput el
+	@ranlib $(NAME)
+	@tput setaf 2
+	@echo "$(NAME) builded successful!"
+	@tput cnorm
+	@tput sgr0
 
-$(DIROBJ)%.o : %.c
-	gcc -g $(FLAGS) -c $< -o $@
+$(DIROBJ)%.o : %.c 
+	@tput civis
+	@tput sc
+	@gcc $(FLAGS) -c $< -o $@ 
+	@tput setaf 2
+	@echo -n $<
+	@tput el
+	@tput rc
+
 
 $(DIROBJ):
-	mkdir -p $(DIROBJ)
+	@mkdir -p $(DIROBJ)
 
 clean:
-	/bin/rm -rf $(DIROBJ)
+	@/bin/rm -rf $(DIROBJ)
 	
 fclean: clean
-	/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 	
 re: fclean all 
